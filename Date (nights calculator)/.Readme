@@ -1,0 +1,77 @@
+Here's a README file for the code:
+
+---
+
+# Date Difference Calculator
+
+This Java program calculates the number of nights between an arrival date and a departure date, taking into account leap years. The user is prompted to enter the arrival and departure dates, and the program validates the input to ensure correct chronological order. If the input is valid, it outputs the number of nights spent between the two dates.
+
+## Features
+
+- **Leap Year Calculation**: Correctly adjusts February to 29 days for leap years.
+- **Date Validation**: Ensures that the departure date is after the arrival date.
+- **User-Friendly Prompts**: Guides the user to enter dates in a specific format for consistency.
+
+## Usage
+
+### 1. Run the Program
+To run the program, compile and execute the `Main` class:
+
+```bash
+javac Main.java
+java Main
+```
+
+### 2. Enter the Arrival Date
+The program will prompt for the arrival year, month, and day:
+- **Year**: Must be between 2024 and 2025 (for advance booking).
+- **Month**: Enter the first three letters of the month (e.g., "Jan" for January).
+- **Day**: Enter the day number, validated according to the month's length.
+
+### 3. Enter the Departure Date
+The program will prompt for the departure year, month, and day:
+- **Year**: Must be from 2024 to 3000.
+- **Month**: Use the same three-letter format (e.g., "Feb" for February).
+- **Day**: Validated according to the month.
+
+### 4. Output
+If the dates are valid, the program calculates and displays the number of nights between arrival and departure.
+
+### Example Input and Output
+```
+Please enter the date of your arrival:
+Year: 2024
+(Please only write the 3 first letters of the month!)
+Month: Jan
+Day: 15
+
+Please enter the date of your departure:
+Year: 2024
+(Please only write the 3 first letters of the month!)
+Month: Feb
+Day: 20
+
+Total nights: 36
+```
+
+## Code Structure
+
+- **`main` Method**: Controls the flow by prompting for dates, validating them, and calculating nights.
+- **`getYear` Method**: Ensures the year falls within a specified range and handles future and past constraints.
+- **`getMonth` Method**: Validates the input month against the three-letter month format.
+- **`getDay` Method**: Verifies that the entered day is within the valid range for the given month and year.
+- **`calculateNights` Method**: Calculates the total nights between two dates by converting each date into an absolute day count.
+- **Helper Methods**: `isLeapYear`, `getDaysInMonth`, `calculateDaysFromStart` assist with leap year calculations and day counting.
+
+## Notes
+
+- **Leap Year Calculation**: The program correctly identifies leap years using the standard rule: a leap year is divisible by 4 but not by 100, unless it is also divisible by 400.
+- **Date Chronology**: The program checks that the departure date is after the arrival date. If the dates are invalid, it prompts the user to re-enter them.
+
+## Dependencies
+
+- **Java 8 or later**: The program uses basic Java syntax and the `Scanner` class, which is available in Java 8 and later versions.
+
+---
+
+This README provides instructions for users to run the code and understand its core functions and logic.
