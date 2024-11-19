@@ -1,7 +1,3 @@
-Here's a README file for the code:
-
----
-
 # Date Difference Calculator
 
 This Java program calculates the number of nights between an arrival date and a departure date, taking into account leap years. The user is prompted to enter the arrival and departure dates, and the program validates the input to ensure correct chronological order. If the input is valid, it outputs the number of nights spent between the two dates.
